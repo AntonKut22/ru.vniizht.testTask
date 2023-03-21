@@ -35,12 +35,11 @@ public class CalculatorController {
             return "calculation";
         }
 
-        calculationService.calculation(calculationModel);
+        calculationModel = calculationService.calculation(calculationModel);
 
         String text = "Calculation";
         model.addAttribute("text", text);
         model.addAttribute("calculation", calculationModel);
         return "calculation";
     }
-
 }
